@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Panan's Updater</title>
+	<title>Painan's Updater</title>
 
 	<link type="text/css" rel="stylesheet" href="./css/compiled/styles.css" />
 </head>
