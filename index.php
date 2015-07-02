@@ -30,7 +30,7 @@ EOL;
 		</div>
 		<div class="buttons">
 EOL;
-				foreach (Startables::getAllStartables() as $starter) {
+				foreach (Startables::getStartables() as $starter) {
 					echo "<div class='button button-startable' data-startable='{$starter->getId()}'>{$starter->getName()}</div>";
 				}
 			}
