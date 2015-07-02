@@ -1,9 +1,9 @@
 <?php
 
-class Startables extends SQLUnixContainer {
+class Startables {
 	/** @var Startables[] gotta be a starter y'know?*/
 	private static $startables;
-	public static function getArrayData()
+	public static function getAllStartables()
 	{
 		if (is_null(self::$startables) || !is_array(self::$startables)){
 			self::$startables = array();

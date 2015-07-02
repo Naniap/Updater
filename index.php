@@ -20,7 +20,7 @@
 		<div class="buttons">
 		<div class="button" data-site="-1">ALL SITES</div>
 EOL;
-				foreach (Website::getArrayData() as $site) {
+				foreach (Website::getAllWebsites() as $site) {
 					echo "<div class='button button-website' data-site='{$site->getId()}'>{$site->getName()}</div>";
 				}
 			} else {
@@ -30,7 +30,7 @@ EOL;
 		</div>
 		<div class="buttons">
 EOL;
-				foreach (Startables::getArrayData() as $starter) {
+				foreach (Startables::getAllStartables() as $starter) {
 					echo "<div class='button button-startable' data-startable='{$starter->getId()}'>{$starter->getName()}</div>";
 				}
 			}
