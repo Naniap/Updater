@@ -18,7 +18,7 @@
 			<h1>Painan's Updater</h1>
 		</div>
 		<div class="buttons">
-		<div class="button" data-site="-1">ALL SITES</div>
+		<div class="button button-website" data-site="-1">ALL SITES</div>
 EOL;
 				foreach (Website::getAllWebsites() as $site) {
 					echo "<div class='button button-website' data-site='{$site->getId()}'>{$site->getName()}</div>";
