@@ -4,10 +4,11 @@
  * Class Website
  * Simple container class for a website on my server
  */
-class Website {
+class Website extends SQLUnixContainer {
 	/** @var Website[] All mah websites */
 	private static $allWebsites;
-	public static function getAllWebsites() {
+	public static function getArrayData()
+	{
 		if (is_null(self::$allWebsites) || !is_array(self::$allWebsites)) {
 			self::$allWebsites = array();
 			QueryBuilder::create(SQL::getConnection())
