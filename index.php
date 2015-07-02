@@ -1,5 +1,4 @@
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/engine.php";
-?>
+<?php include_once $_SERVER['DOCUMENT_ROOT'] . "/engine.php"; ?>
 
 <!doctype html>
 
@@ -13,19 +12,31 @@
 
 <body>
 	<div class="wrapper">
+			<?php if (!isset($_GET['action']) || $_GET['action'] == 1) {
+				ECHO <<<EOL
 		<div class="page-title">
 			<h1>Painan's Updater</h1>
 		</div>
-
 		<div class="buttons">
-			<div class="button" data-site="-1">ALL SITES</div>
-			<?php
-			foreach (Website::getAllWebsites() as $site) {
-				echo "<div class='button' data-site='{$site->getId()}'>{$site->getName()}</div>";
+		<div class="button" data-site="-1">ALL SITES</div>
+EOL;
+				foreach (Website::getAllWebsites() as $site) {
+					echo "<div class='button' data-site='{$site->getId()}'>{$site->getName()}</div>";
+				}
+			} else {
+				ECHO <<<EOL
+		<div class="page-title">
+			<h1>Painan's Starter</h1>
+		</div>
+		<div class="buttons">
+EOL;
+				foreach (Startables::getStartables() as $starter) {
+					echo "<div class='button' starter-site='{$starter->getId()}'>{$starter->getName()}</div>";
+				}
 			}
+
 			?>
 		</div>
-
 		<div class="spacer"></div>
 
 		<pre class="console">

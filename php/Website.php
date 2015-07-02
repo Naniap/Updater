@@ -7,7 +7,6 @@
 class Website {
 	/** @var Website[] All mah websites */
 	private static $allWebsites;
-
 	public static function getAllWebsites() {
 		if (is_null(self::$allWebsites) || !is_array(self::$allWebsites)) {
 			self::$allWebsites = array();
